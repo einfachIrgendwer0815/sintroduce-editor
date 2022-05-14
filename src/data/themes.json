@@ -1,0 +1,25 @@
+{
+  "themes": [
+    {
+      "id": 1,
+      "name": "Simple slideshow",
+      "description": "",
+      "src": "https://via.placeholder.com/300x200",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Coming soon",
+      "description": "",
+      "src": "https://via.placeholder.com/300x200",
+      "available": false
+    },
+    {
+      "id": 3,
+      "name": "Coming soon",
+      "description": "",
+      "src": "https://via.placeholder.com/300x200",
+      "available": false
+    }
+  ]
+}
