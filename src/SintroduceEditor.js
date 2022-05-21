@@ -1,4 +1,7 @@
 import React from 'react';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+
+import './sintroduceEditor.scss';
 
 import ThemePicker from './components/themePicker/themePicker';
 
@@ -12,7 +15,9 @@ export default class SintroduceEditor extends React.Component {
   }
 
   renderThemeEditor(theme) {
-
+    return (
+      <></>
+    );
   }
 
   selectTheme(theme) {
@@ -22,10 +27,33 @@ export default class SintroduceEditor extends React.Component {
   }
 
   render() {
-    if(this.state.theme === null) {
-      return (
-        <ThemePicker onThemeSelected={(name) => this.selectTheme(name)} />
+    var child;
+
+    if(this.state.theme == null) {
+      child = (
+        <CSSTransition
+          in={this.state.theme == null}
+          key="themePicker"
+          timeout={500}
+          classNames="themePickerTransition">
+          <ThemePicker onThemeSelected={(name) => this.selectTheme(name)} />
+        </CSSTransition>
       );
+    } else {
+      child = (
+        <CSSTransition
+          in={this.state.theme != null}
+          key="themeEditor"
+          timeout={500}
+          classNames="themeEditorTransition">
+          {this.renderThemeEditor()}
+        </CSSTransition>
+      )
     }
+    return (
+      <SwitchTransition>
+        {child}
+      </SwitchTransition>
+    );
   }
 }

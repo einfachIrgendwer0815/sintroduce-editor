@@ -1,0 +1,17 @@
+.themePickerTransition-exit {
+  opacity: 1;
+}
+
+.themePickerTransition-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.themeEditorTransition-enter {
+  opacity: 0;
+}
+
+.themeEditorTransition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
