@@ -3,7 +3,7 @@ import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
 import './sintroduceEditor.scss';
 
-import ThemePicker from './components/themePicker/themePicker';
+import ThemePicker from '../themePicker/themePicker';
 
 export default class SintroduceEditor extends React.Component {
   constructor() {
